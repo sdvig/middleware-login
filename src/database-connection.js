@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
 
-const connectionString = proccess.env.DB_URL || 'mongodb://localhost/wtm'
+const hostname = 'localhost'
+const database = 'wtm'
 
-mongoose.connect(connectionString)
+mongoose.connect(`mongodb://${hostname}/${database}`)
